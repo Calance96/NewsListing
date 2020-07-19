@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/template/News.master.cs" Inherits="NewsListing.News" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>C-News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="~/resources/css/master.css" />
+    <link rel="stylesheet" type="text/css" href="~/resources/css/bootstrap.min.css" />
+    <script type="text/javascript" src="../resources/js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <nav class="menu">
+                <div class="navbar-brand">
+                    <asp:LinkButton runat="server" ID="BrandLinkBtn" CausesValidation="false" OnClick="BrandLinkBtn_Click">
+                        <asp:Image ImageUrl="~/resources/images/logo.png" runat="server" Width="138px" Height="35px"/>
+                    </asp:LinkButton>
+                </div>
+                 <div style="margin: 0 auto"></div>
+                 <asp:Label runat="server" ID="userFullName" ForeColor="White" CssClass="mr-3 font-weight-bold"/>
+                 <asp:LinkButton CssClass="btn btn-danger menu-button" runat="server" ID="LogoutBtn" Text="Logout" CausesValidation="false" Visible="false" OnClick="LogoutBtn_Click"/>
+                <asp:LinkButton CssClass="btn btn-success menu-button" runat="server" ID="LoginBtn" Text="Login" CausesValidation="false" OnClick="LoginBtn_Click"/>
+                <asp:LinkButton CssClass="btn btn-danger menu-button" runat="server" ID="RegisterBtn" Text="Register" CausesValidation="false" OnClick="RegisterBtn_Click"/>
+            </nav>
+            <div class="bannerTop">
+                <asp:Image ImageUrl="~/resources/images/logo.png" runat="server" />
+            </div>
+            <div class="content">
+                <div class="sideBar">
+                    <div class="sideBarNormalBg"></div>
+                    <asp:LinkButton runat="server" ID="HomeBtn" CssClass="sideBarBtn" OnClick="HomeBtn_Click" CausesValidation="false" Text="Home"/>
+                    <asp:LinkButton runat="server" ID="ChangePasswordBtn" CssClass="sideBarBtn" OnClick="ChangePasswordBtn_Click" CausesValidation="false" Visible="false" Text="Change password"/>
+                </div>
+                <div class="right-content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <!-- Content goes here -->
+                    </asp:ContentPlaceHolder>
+                    <asp:LinkButton runat="server" ClientIDMode="static" OnClientClick="topFunction(); return false" Font-Underline="false" id="topBtn" Text="Top"/>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("topBtn").style.display = "block";
+          } else {
+            document.getElementById("topBtn").style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        } 
+    </script>
+</html>

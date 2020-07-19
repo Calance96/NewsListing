@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Author.master.cs" Inherits="NewsListing.template.Author" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>C-News Author</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="~/resources/css/master.css" />
+    <link rel="stylesheet" type="text/css" href="~/resources/css/bootstrap.min.css" />
+    <script type="text/javascript" src="../resources/js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <nav class="menu">
+                <div class="navbar-brand">
+                    <asp:Image  ImageUrl="~/resources/images/logo.png" runat="server" Width="138px" Height="35px"/>
+                </div>
+                 <div class="ml-auto mr-auto"></div>
+                 <asp:Label runat="server" ID="userFullName" ForeColor="White" CssClass="mr-3 font-weight-bold"/>
+                <asp:LinkButton runat="server" ID="LogoutBtn" CssClass="btn btn-danger" Text="Logout" OnClick="LogoutBtn_Click" CausesValidation="false"/>
+            </nav>
+            <div class="content">
+                <div class="sideBar">
+                    <div class="sideBarAuthorBg"></div>
+                    <asp:LinkButton runat="server" ID="AuthorHomeBtn" Text="Dashboard" CssClass="sideBarBtn" OnClick="AuthorHome_Click" CausesValidation="false"/>
+                    <asp:LinkButton runat="server" ID="NewsHomeBtn" Text="View all news" CssClass="sideBarBtn" OnClick="NewsHomeBtn_Click" CausesValidation="false"/>
+                    <asp:LinkButton runat="server" ID="AddNewsBtn" Text="Add news article" CssClass="sideBarBtn" OnClick="AddNewsBtn_Click" CausesValidation="false"/>
+                    <asp:LinkButton runat="server" ID="ChangePasswordBtn" Text="Change password" CssClass="sideBarBtn" OnClick="ChangePasswordBtn_Click" CausesValidation="false"/>
+                    <asp:LinkButton runat="server" ID="AddAuthorBtn" Text="Add news author" CssClass="sideBarBtn" OnClick="AddAuthorBtn_Click" CausesValidation="false" Visible="false"/>
+                </div>
+                <div class="right-content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+           </div>
+        </div>
+    </form>
+</body>
+</html>

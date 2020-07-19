@@ -1,0 +1,156 @@
+﻿body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.bannerTop {
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: black;
+    border-bottom: gray solid 2px;
+}
+
+.menu-button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.sideBar {
+    position: sticky;
+    height: 100vh;
+    width: 20%;
+    display: inline-block;
+    background: rgba(200, 200, 200, 0.7);
+    text-align: right;
+    padding: 20px;
+    top: 0;
+    color: white;
+    box-shadow: rgba(0,0,0,0.1) 3px 0 5px;
+    font-size: 1.2em;
+}
+
+.sideBarAuthorBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../images/sideBar_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -100;
+}
+
+.sideBarNormalBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(100,100,100,0.8), rgba(100,100,100,0.8)), url("../images/customerbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -100;
+}
+
+.sideBarBtn {
+    display: block;
+    position: relative;
+    font-family: Arial;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sideBarBtn:hover {
+    text-decoration: none;
+    color: #4cff00;
+    background-color: grey;
+}
+
+.active {
+    color: #4cff00;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-left: 7px solid #38d871;
+    box-sizing: border-box;
+}
+
+.right-content {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    padding: 20px;
+    width: 79%;   
+}
+
+.content {
+    background-color #e7eff9;
+    background-image linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+}
+
+#topBtn {
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none;
+    outline: none; 
+    background-color: rgba(140, 140, 140, 0.7); 
+    color: white; 
+    cursor: pointer; 
+    padding: 5px 10px;
+    font-size: 18px; 
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#topBtn:hover {
+    background-color: #555; 
+}
+
+#loginBox {
+    width: 30%;
+    margin: 100px auto 0 auto;
+    border: 1px #808080 transparent;
+    border-radius: 10px;
+}
+
+#loginBox-header {
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+#loginBox-body {
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.4);
+    border-radius: 0 0 10px 10px;
+    border: 1px #eee transparent;
+}
+
+
+
+
